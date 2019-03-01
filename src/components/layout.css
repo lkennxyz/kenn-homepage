@@ -199,8 +199,9 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  color: #dedede;
+  background-color: #212121;
+  font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -211,13 +212,15 @@ body {
 }
 img {
   max-width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
+  border-radius: 50%;
+  border: 0.5rem solid #4CAF50;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
   margin-bottom: 1.45rem;
 }
 h1 {
@@ -619,4 +622,38 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+.mainPic {
+  border-radius: 50%;
+}
+.links {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.social {
+  display: inherit;
+  flex-direction: row;
+  text-align: center;
+}
+.me {
+  display: inherit;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+.me a, .social a {
+  margin: auto;
+  text-decoration: none;
+  color: #dedede;
+}
+.icon {
+  margin: auto;
+}
+.icon img {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #dedede;
+  margin-bottom: 0;
+  margin-left: auto;
+  border: none;
 }
