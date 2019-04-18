@@ -21,7 +21,7 @@ const IndexPage = () => (
         <a href="https://github.com/lkennxyz/azure-stt-helper">
           azure STT helper
         </a>
-        <a href="https://github.com/lkennxyz/azure-sst-helper-example">
+        <a href="https://stt-example.kenn.dev">
           azure STT helper example
         </a>
         <a href="https://overkill.kenn.dev">
