@@ -18,6 +18,12 @@ const IndexPage = () => (
         <a href="https://blog.kenn.dev">
           blog
         </a>
+        <a href="https://github.com/lkennxyz/azure-stt-helper">
+          azure STT helper
+        </a>
+        <a href="https://github.com/lkennxyz/azure-sst-helper-example">
+          azure STT helper example
+        </a>
         <a href="https://overkill.kenn.dev">
           Project Overkill
         </a>
