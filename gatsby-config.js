@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `/home/kenn ->`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Portfolio site for Liam Kennedy`,
+    author: `@lkennxyz`,
   },
   plugins: [
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -27,6 +28,7 @@ module.exports = {
         // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `site-image-creator`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',

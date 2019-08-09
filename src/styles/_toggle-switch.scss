@@ -1,0 +1,109 @@
+.toggle {
+  position: relative;
+  @media only screen and (max-width: 768px) {
+    width: 3em;
+  }
+  @media only screen and (min-width:768px) {
+    width: 90px;
+  }
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select: none;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  @include themed() {
+    border: 2px solid t($text-important)
+  }
+  border-radius: 20px;
+}
+
+.toggle-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  @media only screen and (max-width: 768px) {
+    transition: margin 0.1s ease-in 0s;
+  }
+  @media only screen and (min-width: 768px) {
+    transition: margin 0.3s ease-in 0s;
+  }
+  &:before, &:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    font-size: 14px;
+    color: $bg--light;
+    font-family: Trebuchet, Arial, sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+  }
+  &:before {
+    @media only screen and (max-width: 768px) {
+      content: attr(sm-on);
+      padding-left: 0.5em;
+    }
+    @media only screen and (min-width: 768px) {
+      content: attr(lg-on);
+      padding-left: 10px;
+    }
+    background-color: $bg--light;
+    color: $text--light;
+  }
+  &:after{
+    @media only screen and (max-width: 768px) {
+      content: attr(sm-off);
+      padding-right: 0.5em;
+    }
+    @media only screen and (min-width: 768px) {
+      content: attr(lg-off);
+      padding-right: 10px;
+    }
+    background-color: $bg--dark;
+    color: $text--dark;
+    text-align: right;
+  }
+}
+
+.toggle-switch{
+  display: block;
+  margin: 6px;
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  @include themed() {
+    border: 2px solid t($text-important);
+  };
+  @media only screen and (max-width: 768px) {
+    width: 1em;
+    right: 1em;
+    border-radius: 1.1em;
+    transition: all 0.3s ease-in 0s;
+  }
+  @media only screen and (min-width: 768px) {
+    width: 18px;
+    right: 56px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+  }
+}
+
+.toggle-checkbox:checked + .toggle-label {
+  .toggle-inner {
+    margin-left: 0px;
+  }
+  .toggle-switch {
+    right: 0px;
+  }
+}
