@@ -1,0 +1,61 @@
+.Project {
+  margin: 1em;
+  width: 45%;
+  //max-height: 30vh;
+  display: grid;
+  grid-template-rows: auto 15%;
+  grid-template-columns: 25% auto;
+  grid-template-areas: "label description"
+    "label tech";
+  @include themed() {
+    box-shadow: 0px 0px 5px 1px t($bg-2);
+  }
+  transition: box-shadow 0.2s;
+  :hover {
+    box-shadow: none;
+  }
+  img {
+    grid-area: image;
+    width: 100%;
+  }
+  .Label {
+    grid-area: label;
+    width: 100%;
+    height: 100%;
+    @include themed() {
+      background: t($bg);
+    };
+    > a {
+      text-decoration: none;
+      @include themed() {
+        color: t($text);
+      }
+    }
+  }
+  .Description {
+    @include themed() {
+      background: t($bg-2);
+      color: t($text);
+    };
+    padding: 0.5em;
+    font-style: italic;
+  }
+  .Tech {
+    @include themed() {
+      background: t($bg-2);
+    };
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    .Tech-Item {
+      @include themed() {
+        background: t($bg);
+        color: t($text);
+      };
+      border-radius: 0.75em;
+      padding: 0.25em;
+    }
+  }
+}

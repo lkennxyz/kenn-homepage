@@ -98,39 +98,4 @@ body {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
-  .Project {
-    margin: 1em;
-    width: 45%;
-    max-height: 30vh;
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-areas: "image"
-      "info";
-    @include themed() {
-      box-shadow: 0px 0px 5px 1px t($bg-2);
-    }
-    transition: box-shadow 0.2s;
-    :hover {
-      box-shadow: none;
-    }
-    img {
-      grid-area: image;
-      width: 100%;
-    }
-    .Info {
-      grid-area: info;
-      background: $bg--2--light;
-      width: 100%;
-      height: 100%;
-      @include themed() {
-        border-top: 1px solid t($text);
-      }
-      > h4 {
-        float: left;
-      }
-      > a {
-        float: right;
-      }
-    }
-  }
 }

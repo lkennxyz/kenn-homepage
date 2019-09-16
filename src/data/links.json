@@ -5,9 +5,9 @@
     "linkedIn": "https://www.linkedin.com/in/lkennxyz"
   },
   "projects": [
-    {"title": "cv", "gUrl": "https://github.com/lkennxyz/cv", "dUrl": "https://cv.kenn.dev"},
-    {"title": "overkill", "gUrl": "https://github.com/lkennxyz/speed-test-webapp", "dUrl": "https://overkill.kenn.dev"},
-    {"title": "blog", "gUrl": "https://github.com/lkennxyz/blog", "dUrl": "https://blog.kenn.dev"},
-    {"title": "azure-stt-helper", "gUrl": "https://github.com/lkennxyz/azure-stt-helper", "dUrl": "https://www.npmjs.com/package/@lkennxyz/azure-stt-helper"}
+    {"title": "cv", "gUrl": "https://github.com/lkennxyz/cv", "dUrl": "https://cv.kenn.dev", "desc": "My CV, made to brush up on my front-end tech", "tech": ["gatsbyjs", "react", "sass", "puppeteer"]},
+    {"title": "overkill", "gUrl": "https://github.com/lkennxyz/speed-test-webapp", "dUrl": "https://overkill.kenn.dev", "desc": "A web app to graph internet speeds captured and saved to mongoDB", "tech": ["react", "graphql", "mongoDB"]},
+    {"title": "blog", "gUrl": "https://github.com/lkennxyz/blog", "dUrl": "https://blog.kenn.dev", "desc": "My blog, made with Gatsby and Netlify CMS", "tech": ["gatsbyjs"]},
+    {"title": "azure-stt-helper", "gUrl": "https://github.com/lkennxyz/azure-stt-helper", "dUrl": "https://www.npmjs.com/package/@lkennxyz/azure-stt-helper", "desc": "An npm library I wrote to send audio to the REST API for Microsoft Azure Cognitive Services for Speech-To-Text", "tech": ["node.js", "azure", "npm"]}
   ]
 }
