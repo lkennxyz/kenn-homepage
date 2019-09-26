@@ -2,6 +2,7 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
 }
 body {
   margin: 0;
@@ -69,7 +70,7 @@ body {
     background: t($bg);
     color: t($text);
   }
-    grid-area: main;
+  grid-area: main;
 }
 .ContentBody {
   height: 100%;
@@ -77,6 +78,7 @@ body {
   grid-template-rows: auto 0.25fr;
   grid-template-areas: "Projects"
     "Social";
+  grid-auto-rows: 1fr;
 }
 .Social {
   grid-area: "Social";
@@ -94,10 +96,10 @@ body {
   }
 }
 .Projects {
-  margin-bottom: 1em;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
   overflow: auto;
+  box-sizing: border-box;
 }
