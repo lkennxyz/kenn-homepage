@@ -94,8 +94,10 @@ body {
   }
 }
 .Projects {
+  margin-bottom: 1em;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
+  overflow: auto;
 }

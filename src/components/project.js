@@ -3,9 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Project = ({ project }) => (
-  <div href={project.dUrl} className="Project">
+  <a href={project.dUrl} className="Project">
+    <img src={`${project.title}.png`}/>
     <div className="Label">
-      <h4>{project.title}</h4>
+      <h3>{project.title}</h3>
       <a href={project.gUrl}><FontAwesomeIcon icon={faGithub}/>{project.gUrl.substring(18)}</a>
     </div>
     <div className="Description">
@@ -22,7 +23,7 @@ const Project = ({ project }) => (
         ))
       }
     </div>
-  </div>
+  </a>
 );
 
 export default Project;
