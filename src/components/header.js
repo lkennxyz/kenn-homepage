@@ -1,38 +1,40 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Link } from "gatsby";
+import PropTypes from "prop-types";
+import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithubSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import { ThemeToggle } from "./theme";
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `transparent`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `#4CAF50`,
-            textDecoration: `none`,
-            fontFamily: `monospace`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+const Header = ({ dark, setDark, siteTitle, social = {} }) => (
+  <div className="Header">
+    <h2>
+      <Link
+        to="/"
+      >
+        {siteTitle}
+      </Link>
+    </h2>
+    <div className="Social">
+      <a href={social.twitter}>
+        <FontAwesomeIcon icon={faTwitterSquare}/>
+        lkennxyz
+      </a>
+      <a href={social.github}>
+        <FontAwesomeIcon icon={faGithubSquare}/>
+        lkennxyz
+      </a>
+      <a href={social.linkedIn}>
+        <FontAwesomeIcon icon={faLinkedin}/>
+        lkennxyz
+      </a>
     </div>
-  </header>
+    <ThemeToggle dark={dark} setDark={setDark}/>
+  </div>
 )
 
 Header.propTypes = {
+  dark: PropTypes.bool.isRequired,
+  setDark: PropTypes.func.isRequired,
   siteTitle: PropTypes.string,
 }
 
