@@ -12,6 +12,8 @@ body {
 .theme {
   margin-top: 0;
   width: 100%;
+  transition: background 0.5s;
+  transition: color 0.5s;
 }
 .theme--big {
   height: 100%;
@@ -101,5 +103,5 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   overflow: auto;
-  box-sizing: border-box;
+  height: 100vh;
 }

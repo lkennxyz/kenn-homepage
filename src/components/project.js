@@ -4,7 +4,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Project = ({ project }) => (
   <a href={project.dUrl} className="Project">
-    <img src={`${project.title}.png`}/>
+    <img src={`${project.title}.png`} alt={`${project.title} Image`}/>
     <div className="Label">
       <h3>{project.title}</h3>
       <a href={project.gUrl}><FontAwesomeIcon icon={faGithub}/>{project.gUrl.substring(18)}</a>
